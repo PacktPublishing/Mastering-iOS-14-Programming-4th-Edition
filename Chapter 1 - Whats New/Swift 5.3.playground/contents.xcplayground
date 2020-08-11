@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='macos' display-mode='raw' buildActiveScheme='true'>
+    <pages>
+        <page name='Intro'/>
+        <page name='Multi-Pattern Catch Clauses'/>
+        <page name='Multiple Trailing Clousures'/>
+        <page name='Synthesized Comparable conformance for enum types'/>
+        <page name='Implicit self in @escaping'/>
+        <page name='Use of @main'/>
+        <page name='Use of where clauses on contextually generic declarations'/>
+        <page name='Enum cases as protocol witnesses'/>
+        <page name='Refine didSet semantics'/>
+        <page name='Float16'/>
+    </pages>
+</playground>
