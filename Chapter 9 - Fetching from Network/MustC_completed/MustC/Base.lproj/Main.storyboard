@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fRq-br-2OA">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17140" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fRq-br-2OA">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17115"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,7 +11,7 @@
         <!--Family members-->
         <scene sceneID="PC9-5B-DCh">
             <objects>
-                <viewController id="8C6-Ek-vPO" customClass="FamilyMembersViewController" customModule="FamilyMovies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8C6-Ek-vPO" customClass="FamilyMembersViewController" customModule="MustC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="voh-Fm-oi7"/>
                         <viewControllerLayoutGuide type="bottom" id="uDD-ru-A49"/>
@@ -22,18 +21,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Kr-d1-ebf">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FamilyMemberCell" textLabel="qqi-GM-lN5" style="IBUITableViewCellStyleDefault" id="5mt-Lq-g0G">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5mt-Lq-g0G" id="MK0-mb-6H7">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Donny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qqi-GM-lN5">
-                                                    <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -52,6 +51,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="2h5-FJ-7AB"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="3Kr-d1-ebf" secondAttribute="trailing" id="E6N-yN-Hfs"/>
@@ -59,7 +59,6 @@
                             <constraint firstAttribute="topMargin" secondItem="3Kr-d1-ebf" secondAttribute="top" id="L6y-EP-Red"/>
                             <constraint firstAttribute="bottomMargin" secondItem="3Kr-d1-ebf" secondAttribute="bottom" id="soX-Za-Mrt"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="2h5-FJ-7AB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Family members" id="xUC-Fr-eey">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="TmC-d6-Qro">
@@ -79,7 +78,7 @@
         <!--Family member-->
         <scene sceneID="8h2-Pr-CX3">
             <objects>
-                <viewController id="6WJ-48-c7H" customClass="MoviesViewController" customModule="FamilyMovies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6WJ-48-c7H" customClass="MoviesViewController" customModule="MustC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0jK-x1-ZEZ"/>
                         <viewControllerLayoutGuide type="bottom" id="ZQh-T5-XAP"/>
@@ -89,20 +88,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iz3-7H-peb">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" textLabel="Jeo-0Q-cFz" style="IBUITableViewCellStyleDefault" id="3dc-py-DWp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" textLabel="Jeo-0Q-cFz" detailTextLabel="RGd-bT-ak4" style="IBUITableViewCellStyleSubtitle" id="3dc-py-DWp">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3dc-py-DWp" id="XzX-bi-sGL">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Awesome movie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jeo-0Q-cFz">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <rect key="frame" x="16" y="5" width="123.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RGd-bT-ak4">
+                                                    <rect key="frame" x="16" y="25.5" width="33" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -116,6 +122,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="0GC-l3-chO"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="Iz3-7H-peb" secondAttribute="bottom" id="6WQ-xG-5vB"/>
@@ -123,7 +130,6 @@
                             <constraint firstItem="Iz3-7H-peb" firstAttribute="leading" secondItem="uPi-8U-oIB" secondAttribute="leading" id="hC1-Yy-WYO"/>
                             <constraint firstAttribute="topMargin" secondItem="Iz3-7H-peb" secondAttribute="top" id="mFT-HZ-8V8"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="0GC-l3-chO"/>
                     </view>
                     <navigationItem key="navigationItem" title="Family member" id="HJh-6g-NuC">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="UrM-pP-VDJ">
@@ -143,17 +149,17 @@
         <!--Add movie-->
         <scene sceneID="nNJ-Q0-a5V">
             <objects>
-                <viewController id="MDX-pC-h2g" customClass="AddMovieViewController" customModule="FamilyMovies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MDX-pC-h2g" customClass="AddMovieViewController" customModule="MustC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ga1-lq-1lQ"/>
                         <viewControllerLayoutGuide type="bottom" id="vO4-oz-8Y8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="q0w-VH-JoJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OSq-Nj-7wk">
-                                <rect key="frame" x="16" y="96" width="343" height="96.5"/>
+                                <rect key="frame" x="16" y="88" width="343" height="100.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dln-xi-tAn">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -162,12 +168,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. British Cake" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2xd-VY-6jH">
-                                        <rect key="frame" x="0.0" y="28.5" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="343" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2R-AZ-q78">
-                                        <rect key="frame" x="132.5" y="66.5" width="78" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2R-AZ-q78">
+                                        <rect key="frame" x="132.5" y="70.5" width="78" height="30"/>
                                         <state key="normal" title="Save movie"/>
                                         <connections>
                                             <action selector="saveTapped" destination="MDX-pC-h2g" eventType="touchUpInside" id="L5w-H7-isW"/>
@@ -180,13 +186,13 @@
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="0QU-8Y-Vrg"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="OSq-Nj-7wk" secondAttribute="leading" id="ZEi-tL-dKs"/>
                             <constraint firstItem="OSq-Nj-7wk" firstAttribute="top" secondItem="0QU-8Y-Vrg" secondAttribute="top" constant="32" id="mEf-8L-pX5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OSq-Nj-7wk" secondAttribute="trailing" id="sH5-bN-7nC"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="0QU-8Y-Vrg"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add movie" id="Bf1-LF-epL">
@@ -208,17 +214,17 @@
         <!--Add family member-->
         <scene sceneID="hJb-jB-ERs">
             <objects>
-                <viewController id="zNt-r2-aax" customClass="AddFamilyMemberViewController" customModule="FamilyMovies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zNt-r2-aax" customClass="AddFamilyMemberViewController" customModule="MustC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UOk-NZ-BJr"/>
                         <viewControllerLayoutGuide type="bottom" id="kPg-0F-W18"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CnP-A4-hU6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hZW-w0-Mac">
-                                <rect key="frame" x="16" y="96" width="343" height="96.5"/>
+                                <rect key="frame" x="16" y="88" width="343" height="100.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family member name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESU-yC-oga">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -227,12 +233,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. Guus" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hVv-32-c18">
-                                        <rect key="frame" x="0.0" y="28.5" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="343" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jx8-oh-RdT">
-                                        <rect key="frame" x="102" y="66.5" width="139" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jx8-oh-RdT">
+                                        <rect key="frame" x="102" y="70.5" width="139" height="30"/>
                                         <state key="normal" title="Save family member"/>
                                         <connections>
                                             <action selector="saveTapped" destination="zNt-r2-aax" eventType="touchUpInside" id="mGq-be-cGa"/>
@@ -245,13 +251,13 @@
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="4ti-lQ-lhV"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="hZW-w0-Mac" secondAttribute="trailing" id="67l-HU-xwX"/>
                             <constraint firstItem="hZW-w0-Mac" firstAttribute="top" secondItem="4ti-lQ-lhV" secondAttribute="top" constant="32" id="XOm-TJ-VzK"/>
                             <constraint firstAttribute="leadingMargin" secondItem="hZW-w0-Mac" secondAttribute="leading" id="f5y-av-dwa"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="4ti-lQ-lhV"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add family member" id="4fn-IS-9kh">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="l1X-PS-4or">
@@ -274,7 +280,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fRq-br-2OA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NwB-gn-2IK">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -292,7 +298,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B2b-MQ-DJS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="A1s-Y1-YpV">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -310,7 +316,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zc1-y0-1Nd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uPu-km-xYe">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

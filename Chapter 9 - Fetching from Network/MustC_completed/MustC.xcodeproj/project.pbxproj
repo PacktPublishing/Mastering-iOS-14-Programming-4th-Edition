@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		300900C224D1F5D200F6462D /* NSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300900C124D1F5D200F6462D /* NSPersistentContainer.swift */; };
 		300900C524D1F6F400F6462D /* MustC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 300900C324D1F6F400F6462D /* MustC.xcdatamodeld */; };
+		3025562124D46CBF00F9FA14 /* MovieDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025562024D46CBF00F9FA14 /* MovieDBHelper.swift */; };
+		3025562324D46DAD00F9FA14 /* MovieDBResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025562224D46DAD00F9FA14 /* MovieDBResponse.swift */; };
 		30FDFF9324D211F100A51E18 /* NSManagedObjectContext .swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FDFF9224D211F100A51E18 /* NSManagedObjectContext .swift */; };
 		97A5DDDE21066674002FB912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5DDDD21066674002FB912 /* AppDelegate.swift */; };
 		97A5DDE021066674002FB912 /* FamilyMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5DDDF21066674002FB912 /* FamilyMembersViewController.swift */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		300900C124D1F5D200F6462D /* NSPersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPersistentContainer.swift; sourceTree = "<group>"; };
 		300900C424D1F6F400F6462D /* MustC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MustC.xcdatamodel; sourceTree = "<group>"; };
+		3025562024D46CBF00F9FA14 /* MovieDBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBHelper.swift; sourceTree = "<group>"; };
+		3025562224D46DAD00F9FA14 /* MovieDBResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBResponse.swift; sourceTree = "<group>"; };
 		30FDFF9224D211F100A51E18 /* NSManagedObjectContext .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext .swift"; sourceTree = "<group>"; };
 		97A5DDDA21066674002FB912 /* MustC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MustC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97A5DDDD21066674002FB912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3025561F24D46CA700F9FA14 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3025562024D46CBF00F9FA14 /* MovieDBHelper.swift */,
+				3025562224D46DAD00F9FA14 /* MovieDBResponse.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		304A81D924D1F59800C7B40A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +92,7 @@
 		97A5DDDC21066674002FB912 /* MustC */ = {
 			isa = PBXGroup;
 			children = (
+				3025561F24D46CA700F9FA14 /* Helper */,
 				304A81D924D1F59800C7B40A /* Extensions */,
 				97A5DDF021066699002FB912 /* ViewControllers */,
 				97A5DDEF21066691002FB912 /* Protocols */,
@@ -185,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97A5DDE021066674002FB912 /* FamilyMembersViewController.swift in Sources */,
+				3025562324D46DAD00F9FA14 /* MovieDBResponse.swift in Sources */,
 				97A5DDF621066782002FB912 /* MoviesViewController.swift in Sources */,
 				97A5DDDE21066674002FB912 /* AppDelegate.swift in Sources */,
 				300900C224D1F5D200F6462D /* NSPersistentContainer.swift in Sources */,
@@ -192,6 +207,7 @@
 				97A5DDFA210667BD002FB912 /* AddMovieViewController.swift in Sources */,
 				30FDFF9324D211F100A51E18 /* NSManagedObjectContext .swift in Sources */,
 				97A5DDF42106670D002FB912 /* AddFamilyMemberDelegate.swift in Sources */,
+				3025562124D46CBF00F9FA14 /* MovieDBHelper.swift in Sources */,
 				97A5DDF8210667A6002FB912 /* AddFamilyMemberViewController.swift in Sources */,
 				97A5DDF2210666EB002FB912 /* AddMovieDelegate.swift in Sources */,
 			);

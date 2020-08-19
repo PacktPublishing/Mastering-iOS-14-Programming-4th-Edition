@@ -21,6 +21,14 @@ class MoviesViewController: UIViewController, AddMovieDelegate {
       // 2
       familyMember.movies = NSSet(set: newFavorites)
 
+      let helper = MovieDBHelper()
+      helper.fetchRating(forMovie: name) { rating in
+        guard let rating = rating else { return }
+        moc.persist {
+          movie.popularity = rating
+        }
+      }
+
       do {
         try moc.save()
       } catch {
@@ -59,6 +67,7 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
     let moviesArray = Array(movies as! Set<Movie>)
     let movie = moviesArray[indexPath.row]
     cell.textLabel?.text = movie.title
+    cell.detailTextLabel?.text = "Rating: \(movie.popularity)"
 
     return cell
   }
@@ -66,9 +75,20 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension MoviesViewController {
   @objc func managedObjectContextDidChange(notification: NSNotification) {
-    guard let userInfo = notification.userInfo, let updatedObjects = userInfo[NSUpdatedObjectsKey] as? Set<FamilyMember>, let familyMember = self.familyMember else { return }
-    if updatedObjects.contains(familyMember) {
+    guard let userInfo = notification.userInfo else { return }
+
+    if let updatedObjects = userInfo[NSUpdatedObjectsKey] as? Set<FamilyMember>,
+       let familyMember = self.familyMember, updatedObjects.contains(familyMember) {
       tableView.reloadData()
+    }
+
+    if let updatedObjects = userInfo[NSUpdatedObjectsKey] as? Set<Movie> {
+      for object in updatedObjects {
+        if object.familyMember == familyMember {
+          tableView.reloadData()
+          break
+        }
+      }
     }
   }
 }

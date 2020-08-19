@@ -5,12 +5,11 @@
         <relationship name="movies" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Movie" inverseName="familyMember" inverseEntity="Movie"/>
     </entity>
     <entity name="Movie" representedClassName="Movie" syncable="YES" codeGenerationType="class">
-        <attribute name="popularity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="title" attributeType="String"/>
         <relationship name="familyMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FamilyMember" inverseName="movies" inverseEntity="FamilyMember"/>
     </entity>
     <elements>
         <element name="FamilyMember" positionX="-63" positionY="-18" width="128" height="73"/>
-        <element name="Movie" positionX="-54" positionY="0" width="128" height="88"/>
+        <element name="Movie" positionX="-54" positionY="0" width="128" height="73"/>
     </elements>
 </model>
