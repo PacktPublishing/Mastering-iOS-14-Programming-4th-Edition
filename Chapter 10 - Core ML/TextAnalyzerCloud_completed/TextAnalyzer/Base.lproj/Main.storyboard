@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y8t-Aq-FNq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="vHI-na-Uom">
+            <objects>
+                <viewController id="y8t-Aq-FNq" customClass="ViewController" customModule="TextAnalyzer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jww-3b-WzK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNV-2S-1Eh">
+                                <rect key="frame" x="145.5" y="270" width="84" height="30"/>
+                                <state key="normal" title="Analyze text"/>
+                                <connections>
+                                    <action selector="analyze" destination="y8t-Aq-FNq" eventType="touchUpInside" id="hcP-Xg-nv6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write text below:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDd-w8-eWv">
+                                <rect key="frame" x="16" y="20" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="424-bw-g0D">
+                                <rect key="frame" x="16" y="49" width="343" height="213"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="213" id="HIr-ma-LB1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oNV-2S-1Eh" firstAttribute="top" secondItem="424-bw-g0D" secondAttribute="bottom" constant="8" id="0UI-QK-42G"/>
+                            <constraint firstItem="424-bw-g0D" firstAttribute="leading" secondItem="0ff-19-aoj" secondAttribute="leading" constant="16" id="1wn-pd-DQI"/>
+                            <constraint firstItem="YDd-w8-eWv" firstAttribute="top" secondItem="0ff-19-aoj" secondAttribute="top" id="Beb-AJ-cf9"/>
+                            <constraint firstItem="0ff-19-aoj" firstAttribute="trailing" secondItem="424-bw-g0D" secondAttribute="trailing" constant="16" id="GDd-22-zuY"/>
+                            <constraint firstItem="oNV-2S-1Eh" firstAttribute="centerX" secondItem="424-bw-g0D" secondAttribute="centerX" id="Hiy-76-UlM"/>
+                            <constraint firstItem="YDd-w8-eWv" firstAttribute="leading" secondItem="0ff-19-aoj" secondAttribute="leading" constant="16" id="LCg-9x-HCa"/>
+                            <constraint firstItem="424-bw-g0D" firstAttribute="top" secondItem="YDd-w8-eWv" secondAttribute="bottom" constant="8" id="Ted-L9-Vh5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0ff-19-aoj"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="424-bw-g0D" id="sNQ-Xo-vDh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4PV-Ln-DwK" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IV</key>
+	<data>
+	bieFO5mzkTbS4YW4ySts1g==
+	</data>
+	<key>Key</key>
+	<data>
+	lnzNFtZ6mTmZce7LD2YpMw==
+	</data>
+	<key>KeyIdentifier</key>
+	<string>DECFAB02-AF49-47DB-A794-508A94E0D633</string>
+	<key>Version</key>
+	<integer>1</integer>
+</dict>
+</plist>

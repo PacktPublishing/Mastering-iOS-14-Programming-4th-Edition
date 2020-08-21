@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageAnalyzer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BlP-yX-LKC">
+                                <rect key="frame" x="67.5" y="36" width="240" height="240"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="SHk-3Y-vK9"/>
+                                    <constraint firstAttribute="width" constant="240" id="tx7-Dk-975"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a picture of..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EH0-0m-Sbf">
+                                <rect key="frame" x="16" y="284" width="343" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select a photo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd7-EM-rn0">
+                                <rect key="frame" x="16" y="328" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="We8-HV-y4A">
+                                <rect key="frame" x="137.5" y="617" width="100" height="30"/>
+                                <state key="normal" title="Select a Photo"/>
+                                <connections>
+                                    <action selector="selectImage" destination="BYZ-38-t0r" eventType="touchUpInside" id="1D0-wI-EgL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BlP-yX-LKC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2VA-cU-wl7"/>
+                            <constraint firstItem="BlP-yX-LKC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="6Jq-mt-kWN"/>
+                            <constraint firstItem="EH0-0m-Sbf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9YP-Eq-gMg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dd7-EM-rn0" secondAttribute="trailing" constant="16" id="DMd-A3-xlp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EH0-0m-Sbf" secondAttribute="trailing" constant="16" id="Jjv-0j-GMP"/>
+                            <constraint firstItem="Dd7-EM-rn0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RyV-lM-dUk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="We8-HV-y4A" secondAttribute="bottom" constant="20" id="VjE-kE-nAu"/>
+                            <constraint firstItem="Dd7-EM-rn0" firstAttribute="top" secondItem="EH0-0m-Sbf" secondAttribute="bottom" constant="8" id="iua-NK-2aN"/>
+                            <constraint firstItem="We8-HV-y4A" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="l6O-hK-wyD"/>
+                            <constraint firstItem="EH0-0m-Sbf" firstAttribute="top" secondItem="BlP-yX-LKC" secondAttribute="bottom" constant="8" id="yuV-2e-rty"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mLo-BC-dWv"/>
+                    <connections>
+                        <outlet property="imageView" destination="BlP-yX-LKC" id="Ldw-Ky-d6p"/>
+                        <outlet property="objectDescription" destination="Dd7-EM-rn0" id="tOI-lp-GQe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
