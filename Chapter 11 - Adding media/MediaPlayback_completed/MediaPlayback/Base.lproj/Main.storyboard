@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aB1-Q1-fg9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video-->
+        <scene sceneID="qvr-e4-06O">
+            <objects>
+                <viewController id="khw-ZZ-O1b" customClass="VideoViewController" customModule="MediaPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OaX-nT-1TU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="bYU-nM-gkb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Video" image="video" id="Muc-Fc-e1L"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5KX-YX-W54" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="-14"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="JzR-ZZ-t9y">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="aB1-Q1-fg9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aKQ-QY-nhn">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="khw-ZZ-O1b" kind="relationship" relationship="viewControllers" id="KvY-N8-bWm"/>
+                        <segue destination="ifE-42-MR1" kind="relationship" relationship="viewControllers" id="R2E-QN-PDG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="axd-c0-yS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194" y="296"/>
+        </scene>
+        <!--Audio-->
+        <scene sceneID="4vP-hv-Znn">
+            <objects>
+                <viewController id="ifE-42-MR1" customClass="AudioViewController" customModule="MediaPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vq0-HF-FsU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="SIw-yt-bVW">
+                                <rect key="frame" x="37.5" y="255" width="300" height="128.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WP-ZV-cYh">
+                                        <rect key="frame" x="107" y="0.0" width="86.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JiM-tK-IJV">
+                                        <rect key="frame" x="90" y="44.5" width="120" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVB-Uq-14L">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <state key="normal" title="&lt;&lt;"/>
+                                                <connections>
+                                                    <action selector="previousTapped" destination="ifE-42-MR1" eventType="touchUpInside" id="Vcz-pC-CoA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAE-dk-kmA">
+                                                <rect key="frame" x="45" y="0.0" width="30" height="30"/>
+                                                <state key="normal" title="Play"/>
+                                                <connections>
+                                                    <action selector="playPauseTapped" destination="ifE-42-MR1" eventType="touchUpInside" id="leH-SI-p8w"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zl8-3F-FjI">
+                                                <rect key="frame" x="90" y="0.0" width="30" height="30"/>
+                                                <state key="normal" title="&gt;&gt;"/>
+                                                <connections>
+                                                    <action selector="nextTapped" destination="ifE-42-MR1" eventType="touchUpInside" id="CxW-mP-Fkz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="CxS-1G-qNt">
+                                        <rect key="frame" x="-2" y="98.5" width="304" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="ph6-js-m76"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="sliderChanged" destination="ifE-42-MR1" eventType="valueChanged" id="TyY-g8-kAy"/>
+                                            <action selector="sliderDragEnd" destination="ifE-42-MR1" eventType="touchUpInside" id="3c2-3B-tjX"/>
+                                            <action selector="sliderDragEnd" destination="ifE-42-MR1" eventType="touchUpOutside" id="auq-T6-pJy"/>
+                                            <action selector="sliderDragStart" destination="ifE-42-MR1" eventType="touchDown" id="gaK-00-gMb"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SIw-yt-bVW" firstAttribute="centerX" secondItem="ma1-FX-umi" secondAttribute="centerX" id="OuT-yb-GV7"/>
+                            <constraint firstItem="SIw-yt-bVW" firstAttribute="centerY" secondItem="ma1-FX-umi" secondAttribute="centerY" id="UHT-rP-AI1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ma1-FX-umi"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Audio" image="music" id="HQl-Nu-cPY"/>
+                    <connections>
+                        <outlet property="playPause" destination="hAE-dk-kmA" id="0Mv-sj-1Ns"/>
+                        <outlet property="slider" destination="CxS-1G-qNt" id="nR4-9n-G9D"/>
+                        <outlet property="titleLabel" destination="3WP-ZV-cYh" id="FmW-zV-qkb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qFF-47-GCr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="646"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="music" width="16" height="16"/>
+        <image name="video" width="16" height="16"/>
+    </resources>
+</document>
