@@ -40,7 +40,7 @@ extension CustomAnimator: UIViewControllerAnimatedTransitioning {
         transitionContainer.addSubview(toViewController.view)
         
         // 5
-        let animationTiming = UISpringTimingParameters( dampingRatio: 0.8,
+        let animationTiming = UISpringTimingParameters( dampingRatio: 0.5,
                                                         initialVelocity: CGVector(dx: 1, dy: 0))
         
         let animator = UIViewPropertyAnimator(duration: transitionDuration(using: transitionContext), timingParameters: animationTiming)
