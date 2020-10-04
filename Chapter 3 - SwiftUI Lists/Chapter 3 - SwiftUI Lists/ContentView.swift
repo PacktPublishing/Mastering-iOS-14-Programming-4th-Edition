@@ -8,6 +8,9 @@ struct ContentView: View {
     
     @State var contacts: [String] = [String]()
     
+    // Data to set via Simulator
+    //@State var contacts = ["Chris", "Andy", "Harry", "Nathan", "Sam"]
+    
     var body: some View {
         List {
             ForEach(contacts, id: \.self) { contact in
