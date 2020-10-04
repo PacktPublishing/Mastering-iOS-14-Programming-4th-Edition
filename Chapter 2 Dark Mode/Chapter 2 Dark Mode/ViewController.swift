@@ -37,10 +37,11 @@ class ViewController: UIViewController {
         tableView.backgroundColor = UIColor.systemGroupedBackground
         
         headerImageView.image = UIImage.header
-                
-        for window in UIApplication.shared.windows {
-            window.overrideUserInterfaceStyle = .dark
-        }
+          
+        // Logic to override Interface Style programatically
+//        for window in UIApplication.shared.windows {
+//            window.overrideUserInterfaceStyle = .dark
+//        }
 
     }
     
