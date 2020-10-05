@@ -12,7 +12,6 @@ class FamilyMembersViewController: UIViewController, AddFamilyMemberDelegate {
     super.viewDidLoad()
 
     let moc = persistentContainer.viewContext
-    moc.automaticallyMergesChangesFromParent = true
 
     let request = NSFetchRequest<FamilyMember>(entityName: "FamilyMember")
     request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
@@ -26,24 +25,21 @@ class FamilyMembersViewController: UIViewController, AddFamilyMemberDelegate {
     }
   }
 
-  func saveFamilyMember(withName name: String) {
-    // 1
+  func saveFamilyMemberOld(withName name: String) {
     let moc = persistentContainer.viewContext
-
-    // 2
     moc.perform {
-
-    // 3
       let familyMember = FamilyMember(context: moc)
       familyMember.name = name
-
-    // 4
       do {
         try moc.save()
       } catch {
         moc.rollback()
       }
     }
+  }
+
+  func saveFamilyMember(withName name: String) {
+
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
