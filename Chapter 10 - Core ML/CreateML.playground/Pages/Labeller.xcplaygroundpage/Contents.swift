@@ -6,4 +6,4 @@ let model = try! MLTextClassifier(trainingData: trainingData, textColumn: "text"
 try! model.write(to: URL(fileURLWithPath: "/Users/marioeguiluz/Desktop/TextClassifier.mlmodel"))
 
 let techHeadline = try! model.prediction(from: "Snap users drop for first time, but revenue climbs")
-let politicsHeadline = try! model.prediction(from: "Spike Lee says President Donald Trump is a 'bullhorn' for racism")
+let politicsHeadline = try! model.prediction(from: "President Donald Trump is approving a new law")
