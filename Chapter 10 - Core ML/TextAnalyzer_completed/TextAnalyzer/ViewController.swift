@@ -16,9 +16,9 @@ class ViewController: UIViewController {
   
   @IBAction func analyze() {
     let wordCount = getWordCounts(from: textView.text)
-    let model = SentimentPolarity()
+    let model = try? SentimentPolarity(configuration: .init())
 
-    guard let prediction = try? model.prediction(input: wordCount) else { return }
+    guard let prediction = try? model?.prediction(input: wordCount) else { return }
 
     let alert = UIAlertController(title: nil, message: "Your text is rated: \(prediction.classLabel)", preferredStyle: .alert)
     let okayAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
