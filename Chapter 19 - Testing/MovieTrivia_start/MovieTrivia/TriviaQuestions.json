@@ -1,0 +1,21 @@
+{
+    "questions": [{
+        "title": "How many Oscars did Leonardo DiCaprio win in his career?",
+        "answer_a": "None",
+        "answer_b": "Twelve",
+        "answer_c": "One",
+        "correct_answer": 2
+    }, {
+        "title": "Who played captain Jack Sparrow in the Pirates of the Carribeans movies?",
+        "answer_a": "Heith Ledger",
+        "answer_b": "Jeff Dunham",
+        "answer_c": "Johnny Depp",
+        "correct_answer": 2
+    }, {
+        "title": "In what year was Fight Club released?",
+        "answer_a": "1999",
+        "answer_b": "2001",
+        "answer_c": "1989",
+        "correct_answer": 0
+    }]
+}

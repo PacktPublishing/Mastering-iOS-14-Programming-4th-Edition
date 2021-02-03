@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Load Trivia View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoadTriviaViewController" customModule="MovieTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DDb-Pl-Chy"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading trivia questions..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DV3-za-BLr">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DDb-Pl-Chy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DQq-VN-jeD"/>
+                            <constraint firstItem="DV3-za-BLr" firstAttribute="centerX" secondItem="DDb-Pl-Chy" secondAttribute="centerX" id="LLl-b5-lYn"/>
+                            <constraint firstItem="DDb-Pl-Chy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nsw-n2-elj"/>
+                            <constraint firstItem="DV3-za-BLr" firstAttribute="top" secondItem="DDb-Pl-Chy" secondAttribute="bottom" constant="8" id="zgY-sy-Zr4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="Jdz-e7-AFr" kind="presentation" identifier="TriviaLoadedSegue" id="Sra-Bj-EPc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="2Wc-W5-kJL">
+            <objects>
+                <viewController id="Jdz-e7-AFr" customClass="QuestionViewController" customModule="MovieTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sAD-Zj-cDe"/>
+                        <viewControllerLayoutGuide type="bottom" id="WNn-R2-Fff"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6AP-hS-qPR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How may oscars has leonardo dicaprio won in his career?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efy-TO-lkJ">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bog-a7-QhN">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vU1-ws-D2E">
+                                        <state key="normal" title="None"/>
+                                        <connections>
+                                            <action selector="answerButtonTappedWithButton:" destination="Jdz-e7-AFr" eventType="touchUpInside" id="Vn2-wS-5F9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taz-ZH-C3g">
+                                        <state key="normal" title="Twelve"/>
+                                        <connections>
+                                            <action selector="answerButtonTappedWithButton:" destination="Jdz-e7-AFr" eventType="touchUpInside" id="SfM-cr-8Wc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJJ-M1-bNb">
+                                        <state key="normal" title="One"/>
+                                        <connections>
+                                            <action selector="answerButtonTappedWithButton:" destination="Jdz-e7-AFr" eventType="touchUpInside" id="zM5-Sx-MUl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="52N-d4-fqf">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your answer is correct / incorrect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydT-44-6DJ">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQs-yV-IZs">
+                                        <state key="normal" title="Next question"/>
+                                        <connections>
+                                            <action selector="nextQuestionTapped" destination="Jdz-e7-AFr" eventType="touchUpInside" id="NHK-cf-YUJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bog-a7-QhN" firstAttribute="centerY" secondItem="6AP-hS-qPR" secondAttribute="centerY" id="Ak7-W4-clK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Efy-TO-lkJ" secondAttribute="trailing" id="HPL-rF-A27"/>
+                            <constraint firstItem="Efy-TO-lkJ" firstAttribute="top" secondItem="sAD-Zj-cDe" secondAttribute="bottom" constant="8" id="Iek-sa-ZLD"/>
+                            <constraint firstItem="WNn-R2-Fff" firstAttribute="top" secondItem="52N-d4-fqf" secondAttribute="bottom" constant="20" id="KDT-Oa-CAz"/>
+                            <constraint firstItem="52N-d4-fqf" firstAttribute="centerX" secondItem="6AP-hS-qPR" secondAttribute="centerX" id="c7m-Km-pXg"/>
+                            <constraint firstItem="bog-a7-QhN" firstAttribute="leading" secondItem="6AP-hS-qPR" secondAttribute="leadingMargin" id="hCN-yi-jld"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bog-a7-QhN" secondAttribute="trailing" id="khO-Tw-iVO"/>
+                            <constraint firstItem="bog-a7-QhN" firstAttribute="centerX" secondItem="6AP-hS-qPR" secondAttribute="centerX" id="sMH-Q7-jiZ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Efy-TO-lkJ" secondAttribute="leading" id="zfB-Ot-VNk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerAButton" destination="vU1-ws-D2E" id="wZJ-JP-LDf"/>
+                        <outlet property="answerBButton" destination="taz-ZH-C3g" id="tPB-wP-Yo8"/>
+                        <outlet property="answerCButton" destination="kJJ-M1-bNb" id="Xo8-8L-T0T"/>
+                        <outlet property="nextQuestionButton" destination="wQs-yV-IZs" id="dD8-0c-m3O"/>
+                        <outlet property="questionLabel" destination="Efy-TO-lkJ" id="lMi-OC-VvE"/>
+                        <outlet property="resultLabel" destination="ydT-44-6DJ" id="Ja5-P7-ohj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YFk-D0-oBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="139"/>
+        </scene>
+    </scenes>
+</document>
