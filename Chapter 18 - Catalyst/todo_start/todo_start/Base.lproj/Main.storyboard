@@ -88,13 +88,14 @@
                             <constraint firstItem="O3e-MR-Pba" firstAttribute="top" secondItem="Nbr-gi-iO9" secondAttribute="top" id="yH0-rg-crO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2Cl-sn-f4S"/>
                     <connections>
                         <outlet property="tableView" destination="O3e-MR-Pba" id="K8x-Am-Q7U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGl-Id-Z5Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="42.962962962962962"/>
+            <point key="canvasLocation" x="742.77777777777771" y="42.962962962962962"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="PkE-fb-eGs">
@@ -177,12 +178,30 @@
                 <splitViewController allowDoubleColumnStyle="YES" id="nL1-gU-MBd" sceneMemberID="viewController">
                     <connections>
                         <segue destination="anQ-ma-bl1" kind="relationship" relationship="masterViewController" id="cD9-2L-mrY"/>
-                        <segue destination="ize-wh-1Qu" kind="relationship" relationship="detailViewController" destinationCreationSelector="detail" id="j55-OY-BtT"/>
+                        <segue destination="gxS-cA-7WG" kind="relationship" relationship="detailViewController" id="j55-OY-BtT"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uvF-bS-MEG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-686" y="-329"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7x7-i5-clU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gxS-cA-7WG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NkU-Rb-thy">
+                        <rect key="frame" x="0.0" y="0.0" width="759.5" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ize-wh-1Qu" kind="relationship" relationship="rootViewController" id="gmk-KT-DGn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iIV-0t-rsh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="42.962962962962962"/>
         </scene>
     </scenes>
     <resources>

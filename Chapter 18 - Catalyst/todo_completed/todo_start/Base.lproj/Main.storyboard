@@ -127,6 +127,7 @@
                             <constraint firstItem="pP8-DF-VNd" firstAttribute="trailing" secondItem="Nbr-gi-iO9" secondAttribute="trailing" id="s6X-5h-UdZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3ul-GY-3Jy"/>
                     <connections>
                         <outlet property="createButton" destination="9ie-Rn-b1J" id="3QN-nc-xsx"/>
                         <outlet property="tableView" destination="O3e-MR-Pba" id="K8x-Am-Q7U"/>
@@ -134,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGl-Id-Z5Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="42.962962962962962"/>
+            <point key="canvasLocation" x="742.77777777777771" y="42.962962962962962"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="PkE-fb-eGs">
@@ -217,12 +218,30 @@
                 <splitViewController allowDoubleColumnStyle="YES" id="nL1-gU-MBd" sceneMemberID="viewController">
                     <connections>
                         <segue destination="anQ-ma-bl1" kind="relationship" relationship="masterViewController" id="cD9-2L-mrY"/>
-                        <segue destination="ize-wh-1Qu" kind="relationship" relationship="detailViewController" destinationCreationSelector="detail" id="j55-OY-BtT"/>
+                        <segue destination="oeN-hV-Y3K" kind="relationship" relationship="detailViewController" id="j55-OY-BtT"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uvF-bS-MEG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-686" y="-329"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="920-88-eXT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oeN-hV-Y3K" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g7T-FE-Kng">
+                        <rect key="frame" x="0.0" y="0.0" width="759.5" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ize-wh-1Qu" kind="relationship" relationship="rootViewController" id="52z-gI-Kid"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gdD-aS-MJq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="42.962962962962962"/>
         </scene>
     </scenes>
     <resources>
