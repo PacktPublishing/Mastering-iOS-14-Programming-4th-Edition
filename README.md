@@ -54,7 +54,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 * SwiftUI Cookbook [[Packt]](https://www.packtpub.com/product/swiftui-cookbook/9781838981860) [[Amazon]](https://www.amazon.com/dp/1838981861)
 
-## Get to Know the Author(s)
+## Get to Know the Authors
 **Mario Eguiluz Alebicto**
 is a software engineer with over fifteen years of experience in development. He started developing software with Java, switched later to Objective-C when the first iPhone delighted the world, and now he is coding with Swift, Python and JavaScript. He has developed apps for various Fortune 500 companies and also for new disrupting startups since 2011. Now, he is working as a CTO while writing technical and teaching materials whenever possible. Apart from software development, Mario loves to travel, learn about Machine Learning, play sports and has considered himself a hardcore gamer since he was a child.
 
