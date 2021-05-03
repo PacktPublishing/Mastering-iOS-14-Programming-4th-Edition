@@ -10,7 +10,7 @@ import Foundation
 
 struct MovieDBHelper {
   typealias MovieDBCallback = (Double?) -> Void
-  let apiKey = "fe013dd6740d05d68123e759926f5287"
+  let apiKey = "{your_api_key}"
 
   func fetchRating(forMovie movie: String, callback: @escaping MovieDBCallback) {
     guard let searchUrl = url(forMovie: movie) else {
