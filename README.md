@@ -1,7 +1,3 @@
-## [Get this title for $10 on Packt's Spring Sale](https://www.packt.com/B14717?utm_source=github&utm_medium=packt-github-repo&utm_campaign=spring_10_dollar_2022)
------
-For a limited period, all eBooks and Videos are only $10. All the practical content you need \- by developers, for developers
-
 # Mastering iOS 14 Programming - Fourth Edition
 
 <a href="https://www.packtpub.com/in/mobile/mastering-ios-14-programming-fourth-edition"><img src="https://www.packtpub.com/media/catalog/product/cache/4cdce5a811acc0d2926d7f857dceb83b/9/7/9781838822842-original_89.jpeg" alt="Mastering iOS 14 Programming - Fourth Edition" height="256px" align="right"></a>
