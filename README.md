@@ -68,3 +68,7 @@ is a passionate, curious, iOS developer from The Netherlands. With several years
 
 ## Other books by the authors
 * [Learn SwiftUI](https://www.packtpub.com/product/learn-swiftui/9781839215421)
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781838822842">https://packt.link/free-ebook/9781838822842 </a> </p>
